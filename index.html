@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="menu">
+        <div class="tools">
+            <div>
+                <img src="icons/Black_Pencil.svg" class="tool active" id="pencil" onclick="handlechange('pencil')">
+                <div class="card" id="pencilMenu">
+                    <div class="color">
+                        <div class="colorCircle black" onclick="changePencilColor('black')"></div>
+                        <div class="colorCircle blue " onclick="changePencilColor('blue')"></div>
+                        <div class="colorCircle red  " onclick="changePencilColor('red')"></div>
+                    </div>
+
+                    <input type="range" min="1" max="100" value="10" class="slider" id="pencilSlider">
+                </div>
+
+            </div>
+
+            <div>
+                <img src="icons/Eraser.svg" class="tool" id="eraser" onclick="handlechange('eraser')">
+                <div class="card  " id="eraserMenu">
+                    <input type="range" min="1" max="100" value="10" class="slider" id="eraserSlider">
+                </div>
+
+            </div>
+            <div>
+                    <img src="icons/CloseButton.svg" class="tool" id="CloseButton" onclick="resetDraw()">
+            </div>
+        </div>
+
+    </div>
+
+
+    <canvas class="board"></canvas>
+    <script>
+        var board = document.querySelector(".board");
+        var tools = {
+            pencil: document.querySelector("#pencil"),
+            eraser: document.querySelector("#eraser")
+        }
+        var toolsMenu = {
+            pencil: document.querySelector("#pencilMenu"),
+            pencilSlider: document.querySelector("#pencilSlider"),
+            eraser: document.querySelector("#eraserMenu"),
+            eraserSlider: document.querySelector("#eraserSlider")
+
+        }
+
+        board.height = window.innerHeight;
+        board.width = window.innerWidth;
+
+        let dim = board.getBoundingClientRect();
+        var ctx = board.getContext("2d");
+
+        let isDown = false;
+
+        let prex = -100;
+        let prey = -100;
+
+        let width = 10;
+
+        let erase = false;
+        let active = 'pencil';
+        let isMenuDisplay = false;
+
+    </script>
+    <script src="js/toolBar.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+body{
+    margin:0;
+    overflow: hidden;
+}
+
+.tool{
+    height: 5rem;
+    width: 5rem;
+    padding: 0.5rem;
+}
+.tools
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card
+{
+    padding: 0.5;
+    width: 5rem;
+    height: 5rem;
+    background: #336699;
+    display: none;
+    position:absolute;
+    flex-direction: column;
+    justify-content:space-around;
+    border: black 3px solid;
+}
+canvas{
+    border: #336699 3px solid;
+    margin: 5px;
+}
+.show{
+   display: flex;
+}
+.active{
+    background-color:  #CCCCCC;
+    border-radius: 50%;
+}
+
+.color{
+    display: flex;
+    justify-content: space-between;
+}
+.slider{
+    color:red;
+}
+.colorCircle{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+.red{
+    background:red;
+}
+.black{
+    background:black;
+}
+.blue{
+    background:blue;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 15px; /* Specified height */
+    background: black; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.9; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    margin: 0px;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 15px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    background: red; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 15px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    background: red; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
