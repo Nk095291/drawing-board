@@ -41,3 +41,13 @@ function unset(e)
 function resetDraw(){
     ctx.clearRect(0,0,board.width,board.height);
 }
+function Download(){
+    let a = document.createElement("a");
+    document.body.appendChild(a);                   // default quality is 0.92
+    a.href = board.toDataURL();
+    //todo
+    // 1. add menu to ask for image name and quality
+    a.download = "untitle.png";         // default name 
+    a.click();
+    document.body.removeChild(a);
+}
