@@ -91,3 +91,37 @@ canvas{
     background: red; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
+
+.mainStickyDiv{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 3;
+}
+.stickyMenu{
+    width: 261px;
+    height: 30px;
+    background:blue;
+    display: flex;
+    justify-content: flex-end;
+}
+textarea{
+    background-color: gray;
+}
+.make_circle{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+
+}
+.minimize{
+    background: green;
+}
+.cancel{
+    background: red;
+}
+.hide{
+    display: none;
+}

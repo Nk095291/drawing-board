@@ -38,13 +38,29 @@
             </div>
             <div>
                 <img src="icons/Download.svg" class="tool" id="DownloadButton" onclick="Download()">
-        </div>
+            </div>
+            <div>
+                <img src="icons/StickyNote.svg" class="tool" id="StickyNote" onclick="createStickyNote()">
+            </div>
+
         </div>
 
     </div>
 
 
     <canvas class="board"></canvas>
+
+    <!-- <div class="mainStickyDiv">   
+        <div class="stickyMenu" onmousedown="setSticky()" onmouseup="unsetSticky()" onmousemove="play()">
+            <div class="minimize make_circle" onclick="minimize()"></div>
+            <div class="cancel make_circle" onclick="cancel()"></div>
+        </div>
+        <textarea cols="30" rows="10" onmousemove="unsetSticky()"></textarea>
+    </div> -->
+
+
+
+
     <script>
         var board = document.querySelector(".board");
         var tools = {
@@ -76,9 +92,12 @@
         let active = 'pencil';
         let isMenuDisplay = false;
 
+        let dragging = false;
+
     </script>
     <script src="js/toolBar.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/sticky.js"></script>
 </body>
 
 </html>
