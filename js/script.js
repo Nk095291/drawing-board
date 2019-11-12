@@ -13,8 +13,7 @@ function set(e)
 }
 function move(e)
 {
-    if(dragging)
-        dragging= false;
+  
     if(isDown && !erase)
     {
         ctx.lineTo(event.clientX- dim.x,event.clientY-dim.y);

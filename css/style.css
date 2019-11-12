@@ -1,6 +1,11 @@
+:root{
+    --lightblue : #0480fd;
+}
+
 body{
     margin:0;
-    /* overflow: hidden; */
+    overflow: hidden;
+    /* background: #336699; */
 }
 
 .tool{
@@ -18,7 +23,7 @@ body{
     padding: 0.5;
     width: 5rem;
     height: 5rem;
-    background: #336699;
+    background: lightblue;
     display: none;
     position:absolute;
     flex-direction: column;
@@ -60,36 +65,36 @@ canvas{
 }
 
 .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
+    -webkit-appearance: none;  
     appearance: none;
-    width: 100%; /* Full-width */
-    height: 15px; /* Specified height */
-    background: black; /* Grey background */
-    outline: none; /* Remove outline */
-    opacity: 0.9; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    width: 100%; 
+    height: 15px;
+    background: black; 
+    outline: none; 
+    opacity: 0.9; 
+    -webkit-transition: .2s; 
     transition: opacity .2s;
     margin: 0px;
   }
   
-  /* Mouse-over effects */
+
   .slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
+    opacity: 1;
   }
   .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
+    -webkit-appearance: none;
     appearance: none;
-    width: 15px; /* Set a specific slider handle width */
-    height: 15px; /* Slider handle height */
-    background: red; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 15px; 
+    height: 15px; 
+    background: red;
+    cursor: pointer; 
   }
   
   .slider::-moz-range-thumb {
-    width: 15px; /* Set a specific slider handle width */
-    height: 15px; /* Slider handle height */
-    background: red; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 15px; 
+    height: 15px;
+    background: red;
+    cursor: pointer;
   }
 
 .mainStickyDiv{
@@ -98,10 +103,10 @@ canvas{
     position: absolute;
     left: 50%;
     top: 50%;
-    z-index: 3;
+    /* z-index: 3; */
 }
 .stickyMenu{
-    width: 261px;
+    width: 100%;
     height: 30px;
     background:blue;
     display: flex;
@@ -109,6 +114,7 @@ canvas{
 }
 textarea{
     background-color: gray;
+    min-width: 60px;
 }
 .make_circle{
     height: 30px;
@@ -123,5 +129,5 @@ textarea{
     background: red;
 }
 .hide{
-    display: none;
+    visibility: hidden;
 }
