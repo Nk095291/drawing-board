@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
 </head>
 
 <body>
@@ -42,7 +43,24 @@
             <div>
                 <img src="icons/StickyNote.svg" class="tool" id="StickyNote" onclick="createStickyNote()">
             </div>
+            <!-- <div>
+                <a class="fileSelector">
+                        <img src="icons/Photo.svg" class="tool" id="" >
+                </a>
+                <input type="file"  name="" id="InputFile">
+            </div> -->
 
+            <div id="undo" >
+                <img class="tool" src="icons/Undo.svg" alt="">
+            </div>
+
+            <div id="redo" >
+                    <img class="tool" src="icons/Redo.svg" alt="">
+            </div>
+
+            <div id="zoom" >
+                <img class="tool" src="icons/Glass.svg" alt="">
+        </div>
         </div>
 
     </div>
@@ -63,6 +81,7 @@
             eraserSlider: document.querySelector("#eraserSlider")
 
         }
+        // var fileSelector = document.querySelector(".file")
 
         board.height = window.innerHeight;
         board.width = window.innerWidth;
@@ -83,7 +102,11 @@
 
         let dragging = false;
 
+        
+
     </script>
+    <script src="js/zoom.js"></script>
+    <script src="js/redo_undo.js"></script>
     <script src="js/toolBar.js"></script>
     <script src="js/script.js"></script>
     <script src="js/sticky.js"></script>

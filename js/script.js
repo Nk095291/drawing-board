@@ -2,7 +2,7 @@
 board.addEventListener("mousedown",set);
 board.addEventListener("mousemove",move);
 board.addEventListener("mouseup",unset);
-
+let didmove = true;
 function set(e)
 {
     hideMenu();
@@ -13,7 +13,11 @@ function set(e)
 }
 function move(e)
 {
-  
+    if(didmove && isDown)
+    {
+        ActionHistory.saveState(board);
+        didmove=false;
+    }
     if(isDown && !erase)
     {
         ctx.lineTo(event.clientX- dim.x,event.clientY-dim.y);
@@ -33,12 +37,15 @@ function move(e)
 function unset(e)
 {
     isDown = false;
+    didmove = true;
     if(erase)
         ctx.clearRect(prex-dim.x- Math.floor(width/2),prey -dim.y- Math.floor(width/2),width,width);
     prex = -100;
     prey = -100;    // re-set
+
 }
 function resetDraw(){
+    ActionHistory.saveState(board);
     ctx.clearRect(0,0,board.width,board.height);
 }
 function Download(){
@@ -51,3 +58,6 @@ function Download(){
     a.click();
     document.body.removeChild(a);
 }
+
+
+// can use ctx.globalComositeOperation  to implement eraser

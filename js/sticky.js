@@ -9,7 +9,6 @@ function createStickyNote() {
         </div>
         <textarea cols="30" rows="10"></textarea>`;
         document.body.appendChild(stickyNote);
- 
 }
 document.addEventListener("mousemove",play);
 document.addEventListener("mouseup",unsetSticky);
